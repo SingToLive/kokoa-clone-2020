@@ -1,3 +1,5 @@
 # Kakoa Clone 2020 Update
 
-CSS got so much better!
+HTML & CSS got so much better!
+
+Now it will be written by STL :)
