@@ -1,0 +1,568 @@
+코코아톡 클론코딩
+2.0
+folder name has to be always lower case
+
+2.3
+ul = unordered list
+li = list item
+ol = ordered list
+
+prettier가 적용되지 않을때
+F1 혹은 cmd+shift+p 를 누르고 Format Document with > Configure Default Formatter > prettier하면 적용됨
+
+2.4
+a = anchor /태그로써 다른 웹 사이트에 들어갈때 사용
+attributes = 태그에 부가적인 정보를 입력 ex)href  watermelon등 다양한 것을 해도 되지만 어차피 browser가 이해를 못한다. 또한 오직 anchor에서만 적용 가능하다.
+href = http reference or hyperlink reference 
+target attributes의 일종으로 Default가 _self이다. _blank로 하면 다른 창에서 열린다.
+
+img/ / 태그, self-closing tag로 </img>도 없고 text도 없다.
+src / img의 attributes로써 이미지 주소를 불러오는 역할을 한다. 같은 폴더 안에 있으면 파일 제목 그대로 불러올수 있다.
+
+2.5
+rule to structure html
+first every html document starts with <!DOCTYPE html>
+second open html by <html></html>
+third website has two part. head and body. head - invisible setting, body - content which user will see
+
+2.6
+meta - meta text : 부가적인 정보
+og:title - 카카오톡(이든 구글이든)에 링크 보냈을때 나오는 타이틀
+og:url - '' 링크
+og:image - ''그림
+description - google에 검색 했을때 하단에 나오는 내용
+charset="utf-8" - meta text 중 하나로 한글이나 다른 특수문자를 바꿀 때 웹이 이해하게 도와주는 명령어로 항상 넣도록
+
+lang - html의 attribute로 langauge를 의미, 웹사이트한테 어떤 언어를 메인으로 하고 있는지 알려줌
+
+link - tag로써 창위의 작은 아이콘 등을 불러와서 적용한다.
+
+결론 모든 엑스트라 정보는 정보 head에 적는다.
+
+2.7
+Tag들은 하도 많아서 외우는건 불가능하다.
+구글에 css html javascript를 검색할때 검색어 맨 마지막에 mdn(mozila developer network)을 붙이는걸 추천한다.
+--> 한국어로 번역도 해줌
+w3 school은 사용하지 않는걸 추천한다.(최태현 강사님?)
+
+2.8
+form - html로 만듬
+
+결론
+<tagname attrname="attrvalue">flflflflflfl</tagname>
+만약 required처럼 attribute인데 true false만 있으면 attrvalue를 작성하지 않아도 된다.
+
+2.9
+label - tag로 input과 함께 해야하며 label에는 for라는 attribute이 input에는 id라는 attribute이 있어야하면 서로의 value는 같아야한다.
+label을 누르면 input이 실행된다.
+element하나당 id하나가 가능하다.(태그 하나당) 즉 태그끼리 id가 겹칠수 없다.
+
+2.10
+html 문서를 만들때 필요한 정보
+
+html에서 가장 많이 보는 것은 div
+div는 division인데 쉽게 생각하면 box이며 non-sementic tag이다.
+
+sementic tag - 보기만 해도 그 자체의 용도를 알 수 있는 태크
+header, main, footer 등등
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/element
+
+3.0
+css를 작성하는 방법은 두가지가 있다.
+첫번째 html 파일에 동시에 작성하는거 두번째 따로 만드는것이다.
+보통은 두번째꺼를 추천한다.
+
+첫번째 방법을 하기 위해서 <style>태그를 사용한다.  style tag는 무조건 head에 있어야한다. inline css
+두번째 방법을 사용하기 위해서는 <link>태그가 필요하다. 단! css는 stylesheet이므로 rel="stylesheet"이 필요하다. external css
+
+3.1
+css를 하는데는 3가지 룰만 지키면 된다.
+css는 html 태그를 가르키는 일을 한다. 이때 이 가리키는 것을 selector이라고 한다. selector안에 있는 것을 properties라고 한다. 예를들어 글씨 크기 색깔 등등
+그리고 css는 {}로 작성한다. 작성시 properties:value; 이렇게 작성한다. properties에는 _/를 사용하면 안된다.
+
+3.2
+Css -> c는 cascading, 한단계 후의 한단계라고 생각하면 편함
+css코드가 겹치면 어떻게 될까? cascading 의미 그대로 맨 마지막 코드에 있는 내용이 적용된다.
+
+3.3
+box
+어떤 웹 사이트를 가든 box로 이루어져있다.
+가장 기본적인 box로 div가 있다.
+재밌는건 box를 만들면 웹사이트에서 보여질때 box옆에 아무것도 없다. 이와 같은 걸 block이라고 한다.
+반대로 옆에 올수 있는걸 inline이라고 한다. 같은 라인. link, a, image가 유일하다.
+
+3.4
+block만 가지고 있는 특성(inline은 없는 특성)
+1) block 옆에는 아무것도 올 수 없다.
+2) height와 width가 있다.
+3) margin,padding,border이 있다.
+   margin은 box의 border(경계)로부터 바깥에 있는 공간이다.
+
+
+block<->inline이 가능하다. display 옵션을 사요하면 된다.
+이번 항에서 얘기할것은
+display:inline
+display:block이다.
+
+inline속성이 되면 height와 width을 가질 수 없다.
+
+user agent stylesheet은 browser에서 자동적으로 준것이다.
+
+3.5
+margin을 두방향으로 주는 법
+margin: 상하 좌우
+margin을 사방향으로 한번에 주는 법
+margin: top right bottom left(시계 방향)
+
+collapsing margins 현상 : 흰 box의 경계가 보라색 box의 경계와 같을 때(두 면의 경계가 같을때) 일어나고 그 때 두 box의 margin은 하나가 된다. 수직 방향으로만 일어난다.
+
+3.6
+padding은 box의 경계로부터 '안쪽'에 있는 공간이다.
+id css작성 방법 #id
+
+3.7
+border는 말그대로 box의 경계이다.
+border는 많은 종류가 있지만 거의 하나만 사용된다.
+border: px style color
+
+모든 곳에 전체 적용 시키고 싶으면
+* {}을 사용하면 된다.
+
+3.8
+selector, selector, selector .... {}이 가능하다.
+
+class : id와 달리 많은 요소들이 사용할 수 있다. 또한 중복 될 수 있다.
+.class {}
+
+3.9
+display : inline-block -> inline인데 상하 값도 가지고 좌우에 뭔가 올수 있다.
+근데 inline-block은 잘 안쓴다. 문제가 많고 old하다. 일단 default값이 매우 별로이다.
+대표적인 예로 자동적으로 객체 사이에 빈칸이 생기는데 이는 자동적으로 정해지고 깔끔하지 못하게 나온다.
+더욱이 창 크기 달라지면 계속 다른 형태로 나온다.
+결론: 안쓴다.
+
+3.10
+flexbox는 위의 문제를 해결하기 위해 나온 것
+display : flex;
+
+flexbox를 하기 위한 3가지 규칙
+1) 자식 엘리먼트에는 어떤 것도 적으면 안된다. 부모 엘리먼트만 명시해야 한다.
+<body>
+    <div>
+    <div>
+    <div>
+형태일때 div에 적용을 하고 싶으면 부모인 body에 작성해야한다.
+body {
+    display : flex;
+    justify-content: 원하는 위치
+  를 사용하면 원하는 배치를 배율로 나눌 수 있다.
+}
+2) 주축(main-axis) - horizental
+justify-content가 이에 해당한다.
+3) 교차축(cross-axis) - vertical
+aligin-items가 이에 해당한다.
+stretch의 경우 div를 상하로 늘려주는데 div에 값이 있으면 무시된다.(라기 보다는 값이 있는게 더 밑에 나와서 그런거 같다.)
+
+물론 수평 수축을 반대로 바꿀 수 있다.
+
+tip -> height : 100vh; vh viewport height는 화면 전체를 말한다. 즉, 여기서는 화면 전체 크기(100)을 의미
+
+3.11
+수평 수축을 바꾸는 방법
+flex-direction: column;(default는 row이다.)
+
+3.12
+position:fixed;
+화면을 크게 해서 비교해보면 해당 명령어가 있는 div는 스크롤을 내려도 위치가 고정된다.
+top, left, right, bottom:px;을 사용하면 초기 고정 위치를 바꿀 수 있다.
+
+3.13
+position:static;(default)
+레이아웃이 박스를 처음 두는 위치
+
+position:relative;
+relative를 사용하면 top, left, right, bottom이 사용 가능하다.
+엘리먼트가 처음 놓인 자리에서 상하좌우로 움직인다.
+
+position:absolute;
+right,left,top,left:0px;
+가장 가까운 relative 부모의 맨 오른쪽 왼쪽 위쪽 아래쪽으로 이동한다.
+
+3.14
+div:Pseudo Selector(무진장 많음) {
+    background-color:teal;
+}
+html을 건드리지 않고 작업할 수 있다.
+
+3.15
+<body>
+    <div>
+        <span>hello</span>
+        <p>
+        블레이드 구할 수가 없다.
+        <span>안쪽이다.</span>
+        </p>
+    </div>
+</body>
+이 주어졌을때 p안의 span을 건드리고 싶으면
+p span {} 형태로 작성하면 된다. 2개 이상이여도 가능하다.
+div span {}을 하면 div아래 모든 span이 해당되는데 
+div > span {}을 하면 바로 아래 span만 해당이 된다.
+p + span {} p 바로 옆의 span을 의미한다.
+
+3.16
+<body>
+    <div>
+        <span>hello</span>
+        <p>
+        블레이드 구할 수가 없다.
+        <span>안쪽이다.</span>
+        </p>
+        <address>hi</address>
+        <span>hhii</span>
+    </div>
+</body>
+위의 상황처럼 바로 옆이 아니여도 쓸수 있게 할려면
+p ~ span {}을 사용해야한다.
+
+<body>
+    <div>
+        <form>
+        <input type="text" placeholder="username" />
+        <input type="password" required placeholder="password" />
+        </form>
+    </div>
+</body>
+
+required한것만 배경색을 바꾸고 싶을때
+input:required {}
+
+input:optional {
+        border: 1px solid wheat;
+      }
+input:required {
+        border: 1px solid tomato;
+        }
+
+optional과 required과 겹치니
+input {
+        border: 1px solid wheat;
+      }
+input:required {
+    border: 1px solid tomato;
+    }
+
+attribute selector는 하단과 같이 작동된다. 또한 ~=으로 하면 부분만 같아도 적용된다.
+input[type="password"] {
+        background-color: thistle;
+      }
+
+3.17
+state는 active, focus, hover over, visited, focus within 등 개발자 도구에서 :hov를 누르면 나오는 내용이다.
+
+button:active {
+    background-color: tomato;
+}
+이렇게 바꿀 수 있다.
+
+active는 버튼을 눌렀을때 색깔이 변하는것
+hover over은 마우스가 위에 올라갔을때 색깔이 변하는것
+focus는 키보드로 선택되었을때를 의미한다.(tab키로 바꿀때 바뀌는 대상을 focus로 보면 이해가 좀더 편하다)
+visitied는 링크에만 해당이 되는데, 들어갔으면 색이 변하는것을 의미한다.
+focus-within은 focused된 자식을 가지고 있는 엘리먼트에 적용된다.
+
+form:hover input {
+    background-color: tomato;
+}
+form이 hover상태가 되면 input이 바뀐다.
+
+3.18
+Pseudo-element
+1)::placeholder
+input::placeholder {}
+placeholder의 내용만 바꾼다.
+2)::selection
+긁었을때 변화되는것
+3)::first-line,letter
+첫번째 글자, 라인만 바뀐다.
+더 많은 내용이 있으니 찾아보면 된다.
+
+3.19
+색깔은 css에 있어서 정말 중요하다.
+또한 변수도 정말 많이 사용된다.
+
+color
+1)hexadexima color = #fcce00
+2)rgb = 252 206 0
+3)rgba = 252 206 0 0.8투명도
+
+variable(custom properties)
+:root {
+    --main-color:#fcce00;
+    --default-border: 1px solid var(--main-color)
+}
+p {
+    color:var(--main-color)
+    border:var(--default-border)
+}
+root는 모든 것의 기본이 된다.
+
+4.0
+Transitions - 어떤 상태에서 다른 상태로 변화를 주는것
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>The Nico Time</title>
+    <style>
+      a {
+        color: white;
+        background-color: tomato;
+        text-decoration: none;
+        padding: 3px 5px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">Go Home</a>
+  </body>
+</html>
+아무것도 없는 위의 것에
+
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>The Nico Time</title>
+    <style>
+      a {
+        color: white;
+        background-color: tomato;
+        text-decoration: none;
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: 55px;
+        transition: background-color 10s ease-in-out, color 3s ease;
+      }
+      a:hover {
+        color: tomato;
+        background-color: wheat;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">Go Home</a>
+  </body>
+</html>
+
+transition을 넣는다.
+transition:all 이면 모든것을 의미한다.
+또한 transition은 항상 element에 있어야한다. ex) 위의 경우 a 만약 a:hover에 잇으면 손때자마자 사라진다.
+
+4.1
+https://matthewlein.com/tools/ceaser
+easing에 대한걸 미리 볼 수 있다.
+
+4.2
+transformations
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>The Nico Time</title>
+    <style>
+      img {
+        border: 5px solid black;
+        border-radius: 50%;
+        transform: rotateY(33deg) rotateX(20deg) rotateZ(30deg);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="img/logo.jpg" />
+  </body>
+</html>
+
+css로 3d를 할 수 있다는거에 의미가 있다. 즉, margin, padding이 적용되지 않는다. transformation은 box 차원에서 일어나지 않고 픽셀 차원에서 일어나는 것이다.
+
+
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>The Nico Time</title>
+    <style>
+      img {
+        border: 5px solid black;
+        border-radius: 50%;
+        transition: transform 5s ease-in-out;
+      }
+      img:hover {
+        transform: rotateY(33deg) rotateX(20deg) rotateZ(30deg);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="img/logo.jpg" />
+  </body>
+</html>
+이렇게 2개를 한번에 이을 수 있다.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+
+4.3
+animations
+만들기 위해서는 @keyframes animationname를 적어야한다.
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>The Nico Time</title>
+    <style>
+      @keyframes superSexyCoinFlip {
+        from {
+          transform: rotateX(0);
+        }
+        to {
+          transform: rotateX(360deg);
+        }
+      }
+      img {
+        border: 5px solid black;
+        border-radius: 50%;
+        animation: superSexyCoinFlip 5s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="img/logo.jpg" />
+  </body>
+</html>
+
+4.4
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>The Nico Time</title>
+    <style>
+      @keyframes superSexyCoinFlip {
+        0% {
+          transform: rotateX(0);
+        }
+        50% {
+          transform: rotateX(360deg) translate(100px);
+        }
+        100% {
+          transform: rotateX(0);
+        }
+      }
+      img {
+        border: 5px solid black;
+        border-radius: 50%;
+        animation: superSexyCoinFlip 5s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="img/logo.jpg" />
+  </body>
+</html>
+이런 방식으로 다시 제자리로 돌아오는 등 단계별 행동을 할 수 있게 한다.
+무조건 transform으로 해야하는건 아닌데 transform이 보통은 예쁘다.
+
+https://animista.net/play/basic/rotate
+
+4.5
+media query는 오직 css만을 이용해서 스크린의 사이즈를 알 수 있는 방법
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>The Nico Time</title>
+    <style>
+      div {
+        background-color: teal;
+        width: 200px;
+        height: 200px;
+      }
+      @media screen and (max-width: 400px) {
+        div {
+          background-color: tomato;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
+위와 같이 제약을 주어 변화를 줄 수 있다.(가로, 세로 감지할때도 사용)
+
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>The Nico Time</title>
+    <style>
+      div {
+        background-color: teal;
+        width: 200px;
+        height: 200px;
+      }
+      @media screen and (max-width: 400px) {
+        div {
+          background-color: tomato;
+        }
+      }
+      @media screen and (min-width: 401px) and (max-width: 800px) {
+        div {
+          background-color: gray;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
+
+@media screen and (min-width: 601px) and (max-width: 1200px) and (orientation: landscape) {
+        div {
+          background-color: gray;
+        }
+      }
+으로 가로세로 모드에 따라 다르게 할 수 있다.
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>The Nico Time</title>
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      div {
+        background-color: teal;
+        width: 200px;
+        height: 200px;
+      }
+      @media screen and (min-width: 601px) and (max-width: 1200px) and (orientation: landscape) {
+        div {
+          background-color: gray;
+        }
+      }
+      span {
+        font-size: 50px;
+      }
+      @media screen and (orientation: landscape) {
+        span {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <span>please flip your phone</span>
+  </body>
+</html>
+이러면 특정 모드일때 안보이게 할 수 있다.
+
