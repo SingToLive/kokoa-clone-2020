@@ -25,3 +25,49 @@ https://css-tricks.com/bem-101/
 3)Modifier that changes the style of the Block
 .btn--orange {}
 .btn--big {}
+
+6.3
+아이콘 생성 방법
+1) 직접 이미지를 만들거나 SVG를 만듬
+2) Heroicons
+https://heroicons.dev/
+여기서 누른걸 복붙하면 된다.
+3) Fontawsome
+https://fontawesome.com/
+주어진 코드 킷을 프로젝트에 복붙해야된다. 이 경우 script로 주어지는데 script는 항상 맨마지막에 작성한다.
+
+6.4
+header의 경우 매 페이지 마다 있을태니 클래스를 지정해주는게 좋다.
+form의 경우 screenshot 중에 한개 밖에 없을 것으로 예상되어 id로 한다.
+
+6.5
+(단축키)link:css + enter - css파일을 바로 연결해준다
+font-family - css에서 폰트를 바꿀수 있다.
+https://fonts.google.com
++select this style 클릭 후 Embed에 html에 넣거나 css에 넣는거를 얻을 수 있다.
+Open Sans가 많이 사용된다.
+
+css hack(잡 기술)
+.status-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.status-bar__column {
+  widht: 33%;
+}
+
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+
+이렇게 하면 무조건 중앙에 온다.
+
+6.6
+browesr가 기본적으로 준 margin을 제거한다.
+https://cssdeck.com/blog/scripts/eric-meyer-reset-css/
+브라우저 스타일을 전부 죽이고 시작하는게 더 좋다.
+
+welcom-header__text의 경우 제한을 주기 위해 widht:50px를 한다.
+단, 이경우 중앙 정렬이 망가지는데 이때 welcome-header에서 display:flex를 주고 일자로 안오기 위해 flex-direction을 column으로 준고 aligin-item을 중앙으로 설정한다.
