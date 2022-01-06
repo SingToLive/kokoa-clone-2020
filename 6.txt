@@ -1,0 +1,27 @@
+6.1
+이번 강의는 기존과 다르게 html css를 전부 같이 한다. 시작은 02.png
+
+index.html로 이름짓는 이유는 거의 모든 웹서버가 index.html을 먼저 찾아보게 default 되어 있기 때문이다.
+
+키보드 단축키(visual studio code)
+확인 사항
+1) index.html이 html로 되어있나
+2) prettier가 적용되어 있나
+
+단축키 및 팁
+1)!+enter - html 기본 사항을 작성해줌
+2)화면 분할이 가능하다. 원하는 파일을 드래그 해서 화면 끝에다가 끌고가면 된다.
+3)class명으로 column, box, link 같은거는 너무 흔하다. 그럴때는 상위 연결된 id 또는 class 등에 연결해서 쓰는게 좋다.
+  이를태면 status-bar__column / 이때 __는 두개가 이어진다는 뜻이다.
+
+6.2
+css를 작성할때는 class id를 섞지 않고 class만 사용한다. 이유 햇갈려서
+BEM(Block Elemnent Modified)
+https://css-tricks.com/bem-101/
+1)Block compnent
+.btn {}
+2)Elemnent that depends upon the Block
+.btn__price {}
+3)Modifier that changes the style of the Block
+.btn--orange {}
+.btn--big {}
