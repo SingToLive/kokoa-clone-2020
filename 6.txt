@@ -71,3 +71,41 @@ https://cssdeck.com/blog/scripts/eric-meyer-reset-css/
 
 welcom-header__text의 경우 제한을 주기 위해 widht:50px를 한다.
 단, 이경우 중앙 정렬이 망가지는데 이때 welcome-header에서 display:flex를 주고 일자로 안오기 위해 flex-direction을 column으로 준고 aligin-item을 중앙으로 설정한다.
+
+6.8
+color:inherit;
+inherit은 부모로부터 상속
+text-decoration : __없애기
+
+6.9
+form의 기능
+action = 어떤 페이지로 data를 보낼건지 지정할 수 있다.
+         적어 놓은 URL에 해당하는 파일이 반드시 존재해야 한다.
+method = 2가지 방식 중 하나를 쓸 수 있다. 하나는 Post이고 다른 하나는 GET이다.
+Post는 백엔드 서버에 정보를 전송하는 방식이라 이번 강의에서는 사용할 수 없다.
+GET 방식은 보안에 취약하다. username이랑 password를 GET 방식으로 보내선 안된다. URL에 포함되어도 상관없는 정보들을 GET 방식으로 보내는 것이다.
+
+6.10
+보통의 네비게이션 바는
+    <nav>
+      <ul>
+        <li>
+          <a> </a>
+        </li>
+      </ul>
+    </nav>
+과 같은 형식을 뜬다.
+
+nav>ul>li*n>a
+
+flex를 nav로 했을때 적용되지 않는 이유는 il를 담고 있는 컨테이너가 ul이여서 그렇다.
+
+6.11
+링크들은 기본적으로 파란색 색깔을 가지고 있다.
+
+6.12
+css box padding의 디폴트 원리
+200픽셀의 박스에 50픽셀의 패딩을 주면, css는 기존 박스의 가로를 유지하기 위해 50만큼 박스를 늘림.
+이를 막기 위해 box-sizing:border-box를 쓰면 box의 크기를 유지한 채 padding을 줄 수 있다.
+
+6.13
