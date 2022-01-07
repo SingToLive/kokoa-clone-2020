@@ -32,3 +32,12 @@
   left: 15px;
   bottom: 15px;
 }
+
+.nav__dot {
+  color: #2e363e;
+  display: flex;
+  position: absolute;
+  left: 30px;
+  bottom: 25px;
+  font-size: 0.2cm;
+}
