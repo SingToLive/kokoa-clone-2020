@@ -1,0 +1,25 @@
+.user-component__subtitle__i {
+  color: tomato;
+}
+
+.more-screen {
+  margin-top: 90px;
+}
+
+.more-screen .icon-row {
+  margin-top: 35px;
+}
+
+.more-screen .icon-row:last-child {
+  margin-top: 50px;
+}
+
+.more-suggestion {
+  margin-top: 50px;
+  border-top: var(--main-border);
+  padding-top: 40px;
+}
+
+.more-suggestion__title {
+  margin-bottom: 30px;
+}
