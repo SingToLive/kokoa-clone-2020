@@ -1,0 +1,42 @@
+challeng day 1
+Q1. A website is just a text file
+True
+
+Q2. We write the code, the browser reads the code, the browser paints the website.
+True.
+
+Q3. How many languages can a website be made of?
+Min 1, Max 3
+
+Q4. What are the languages we can use to make a website?
+HTML, CSS, JS
+
+Q5. What do we use HTML for?
+To describe the content of our website to the browser.
+
+Q6. What do we use CSS for?
+To tell the browser how the content of our website looks like.
+
+Q7. Can we make a website only with CSS?
+We can't!
+
+Q8. Can we make a website only with HTML?
+We can!
+
+Q9. What do we use JS for?
+To make our website interactive
+
+Q10. Without JS we can't make a website.
+False
+
+Q11. HTML&CSS are a programming languages.
+False.
+
+Q12. What kind of language is HTML?
+Markup Language.
+
+Q13. What kind of language is CSS?
+Design Language.
+
+Q14. What kind of language is JS?
+Programming Language
