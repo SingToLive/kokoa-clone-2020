@@ -1,0 +1,45 @@
+challeng day 2
+Q1. We need to use VSCode if we want to make a website.
+No.
+
+Q2. If I make a mistake on HTML the browser will show an error.
+False.
+
+Q3. A browser will always show some conten even if the HTML is wrong.
+True.
+
+Q4. I can write any tag I like on HTML, like <food>Kimchi</food>
+Yes, but it will not have an effect on the browser.
+
+Q5. To make a heading on HTML I should write <h1>Title</h1>
+False.
+
+Q6. What does 'ol' stand for?
+Ordered list.
+
+Q7. What does 'ul' stand for?
+Unordered list.
+
+Q8. What does 'li' stand for?
+List item.
+
+Q9. Why do we use attributes on our HTML tags?
+To give tags more information.
+
+Q10. What is the correct way of writing attributes?
+<tag attribute="value">
+
+Q11. Can I write any attribute that I want?
+Yes, but it will not have an effect on the browser.
+
+Q12. All attributes work for all tags.
+False.
+
+Q13. If I give 'href' to a 'h1' it will become a title with a link.
+False.
+
+Q14. 'img' tag is self closing tag.
+True.
+
+Q15. What is a self closing tag?
+A tag that has no content, all information is provided via attributes. 
