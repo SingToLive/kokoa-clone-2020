@@ -1,0 +1,35 @@
+Q1. In how many ways can we include CSS in our HTML?
+Two
+
+Q2. What's the best way to add CSS to our HTML?
+Using external CSS
+
+Q3. In h1 {color:blue} what is the selector?
+h1
+
+Q4. In h1 {color:blue} what is the property?
+color
+
+Q5. In h1 {color:blue} what is the value?
+blue
+
+Q6. How does the browser reads and interprets CSS?
+From top to bottom
+
+Q7. div allow elements next to it.
+False
+
+Q8. span allow elements next to it.
+True.
+
+Q9. Width and height have an effect on inlines
+False
+
+Q10. Width and height have an effect in blocks
+True
+
+Q11. margin: 15px  10px 5px 0px means:
+top 15px left 0px right 10px bottom 5px
+
+Q12. Collapsible margins are weird
+True
