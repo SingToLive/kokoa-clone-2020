@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <style>
+      body {
+        background-color:rgb(107,188,190);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .circle {
+        border-radius:5px;
+        margin: 0px 10px;
+        width: 10px;
+        height: 10px;
+        background-color: rgba(264, 264, 264);
+        float:left;
+      }
+      .divider {
+      width: 7px;
+      height: 30px;
+      margin: 0px 4.5px;
+      background-color: rgba(264, 264, 264);
+      float:left;
+      animation: Bar 0.7s ease-in-out infinite forwards;
+      }
+      @keyframes Bar {
+        0% {
+          transform: none;
+        }
+        20% {
+          transform: scaleY(1.5);
+        }
+        100% {
+          transform: none;
+        }
+      }
+      .divider:nth-child(2) {
+        animation-delay: 0.14s;
+      }
+      .divider:nth-child(3) {
+        animation-delay: 0.28s;
+      }
+      .divider:nth-child(4) {
+        animation-delay: 0.42s;
+      }
+      .divider:last-child {
+        animation-delay: 0.56s;
+      }
+      .box {
+      display: flex;
+      flex-direction:column;
+      justify-content: center;
+      align-items: center;
+      height:500px;
+      width:500px;
+      }
+      .first {
+        margin-bottom:100px;
+        animation: round 1s ease-in-out infinite;
+      }
+      @keyframes round {
+      100% {
+        transform: rotate(360deg);
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+  <div class="box">
+      <div class="first">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+      <div class="second">
+        <div class="divider"></div>
+        <div class="divider"></div>
+        <div class="divider"></div>
+        <div class="divider"></div>
+        <div class="divider"></div>
+      </div>
+    </div>
+    <!-- <script
+      src="https://kit.fontawesome.com/a77969e492.js"
+      crossorigin="anonymous"
+    ></script> -->
+  </body>
+</html>
